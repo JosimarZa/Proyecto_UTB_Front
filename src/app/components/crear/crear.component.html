@@ -1,0 +1,27 @@
+<div class="container">
+    <h2>{{ title }}</h2>
+    <form (ngSubmit)="onSubmit(projectForm)" #projectForm="ngForm">
+      <div class="form-group">
+        <label for="exampleFormControlInput1">Nombre del Proyecto</label>
+        <input type="text" class="form-control" id="exampleFormControlInput1" [(ngModel)]="project.name" name="name" placeholder="Nombre del Proyecto" />
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">Descripción del Proyecto</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="project.description" name="description" placeholder="Descripción del Proyecto"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="category">Categoría</label>
+        <input type="text" class="form-control" id="category" [(ngModel)]="project.category" name="category" placeholder="Categoría del Proyecto" />
+      </div>
+      <div class="form-group">
+        <label for="launchYear">Año de Lanzamiento</label>
+        <input type="text" class="form-control" id="launchYear" [(ngModel)]="project.year" name="launchYear" placeholder="Año de Lanzamiento" />
+      </div>
+      <div class="form-group">
+        <label for="languages">Lenguajes Utilizados</label>
+        <input type="text" class="form-control" id="languages" [(ngModel)]="project.langs" name="languages" placeholder="Lenguajes utilizados" />
+      </div>
+      <button type="submit" class="btn btn-primary">Crear</button>
+    </form>
+  </div>
+  
